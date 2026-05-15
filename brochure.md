@@ -1,7 +1,7 @@
-# Site Audit, a fixed-scope deliverable
+# Curiosity, Site Audits in Plain English
 
 **For:** owners and editors of WordPress, Webflow, and custom-built business websites
-**By:** Adesoji Ajao, admin@curiositybyade.com
+**By:** Curiosity, run by Adesoji Ajao  ·  admin@curiositybyade.com
 **Price:** **$500 flat** (₦750,000 NGN equivalent) · No retainer, no surprises
 **Turnaround:** **5 business days** from kickoff call to written report
 
@@ -101,4 +101,4 @@ If you would like to see what one of these audits actually looks like before com
 
 ---
 
-*Adesoji Ajao runs a small consulting practice focused on independent media, personal-brand websites, and small B2B publishers. He has performed audits for clients in Nigeria, the UK, and the US.*
+*Curiosity is the practice. Adesoji Ajao is the person running it. We focus on independent media, personal-brand websites, and small B2B publishers, with clients in Nigeria, the UK, and the US.*
