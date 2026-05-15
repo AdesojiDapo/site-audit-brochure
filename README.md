@@ -1,6 +1,6 @@
 # Curiosity, Site Audits in Plain English
 
-A productised website audit, by Curiosity (run by Adesoji Ajao). Plain English, no scanners, five deliverables, five business days.
+A productised website audit, by Curiosity. Plain English, no scanners, five deliverables, five business days.
 
 **Live brochure:** [adesojidapo.github.io/site-audit-brochure/](https://adesojidapo.github.io/site-audit-brochure/)
 
