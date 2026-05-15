@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#fbf8f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+<title>Site Audit, a fixed-scope deliverable, by Adesoji Ajao</title>
+<meta name="description" content="A plain-English website audit. Security, privacy, performance, accessibility, and design. Five deliverables, five business days, $500 flat.">
+
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-variable.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/fraunces-variable.woff2" crossorigin>
+
+<style>
+  @font-face{font-family:'Inter';src:url('fonts/inter-variable.woff2') format('woff2-variations'),url('fonts/inter-variable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+  @font-face{font-family:'Fraunces';src:url('fonts/fraunces-variable.woff2') format('woff2-variations'),url('fonts/fraunces-variable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+
+  :root{
+    --bg:#0b0b0c; --bg-elev:#141416; --ink:#f3efe7; --ink-dim:#a8a39a; --ink-muted:#6f6a61;
+    --accent:#c0392b; --accent-soft:#e8b4ab; --gold:#d4a857; --line:#26262b;
+  }
+  @media (prefers-color-scheme: light){
+    :root{--bg:#fbf8f2;--bg-elev:#fff;--ink:#15140f;--ink-dim:#52504a;--ink-muted:#8a8678;--line:#e7e1d4}
+  }
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:var(--accent-soft)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+
+  header.hero{
+    border-bottom:1px solid var(--line);
+    padding:96px 0 64px;
+    background:radial-gradient(900px 400px at 50% 0%, rgba(192,57,43,.12), transparent 70%);
+  }
+  header.hero .kicker{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;margin-bottom:14px;
+  }
+  header.hero h1{
+    font-family:'Fraunces',serif;font-weight:800;
+    font-size:clamp(36px,5.5vw,68px);
+    line-height:1.05;letter-spacing:-.015em;margin:0 0 18px;text-wrap:balance;
+  }
+  header.hero .sub{
+    font-size:clamp(16px,1.6vw,19px);color:var(--ink-dim);max-width:54ch;margin:0 0 30px;
+  }
+  .price-row{
+    display:flex;flex-wrap:wrap;gap:24px;align-items:baseline;
+    padding-top:24px;border-top:1px solid var(--line);
+  }
+  .price{font-family:'Fraunces',serif;font-size:42px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+  .price small{font-family:'Inter',sans-serif;font-size:14px;color:var(--ink-muted);font-weight:500}
+  .turnaround{font-size:14px;color:var(--ink-dim)}
+  .turnaround b{color:var(--ink)}
+
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  h2{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(24px,2.6vw,34px);margin:0 0 24px;letter-spacing:-.01em;text-wrap:balance}
+  h3{font-family:'Fraunces',serif;font-weight:600;font-size:18px;margin:0 0 8px}
+  p{margin:0 0 14px;color:var(--ink-dim)}
+  ul{margin:0 0 20px;padding:0 0 0 1.1em}
+  ul li{padding:4px 0;color:var(--ink-dim)}
+  ul li b{color:var(--ink)}
+
+  .deliverables{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:18px}
+  .card{
+    background:var(--bg-elev);border:1px solid var(--line);border-radius:12px;
+    padding:22px;
+  }
+  .card .n{font-family:'Fraunces',serif;color:var(--accent);font-size:22px;font-weight:700;display:block;margin-bottom:8px}
+  .card p{font-size:14px;margin:0;color:var(--ink-dim)}
+
+  table.scope{width:100%;border-collapse:collapse;font-size:14.5px}
+  table.scope th,table.scope td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  table.scope th{font-family:'Fraunces',serif;font-size:14px;font-weight:600;color:var(--ink);background:var(--bg-elev);width:170px}
+  table.scope td{color:var(--ink-dim)}
+
+  .timeline{display:grid;grid-template-columns:auto 1fr;gap:18px 24px;align-items:start}
+  .timeline .day{
+    font-family:'Fraunces',serif;color:var(--accent);font-weight:700;font-size:14px;
+    letter-spacing:.06em;text-transform:uppercase;padding-top:2px;
+  }
+  .timeline .step b{display:block;color:var(--ink);font-family:'Fraunces',serif;font-size:17px;font-weight:600;margin-bottom:4px}
+  .timeline .step p{margin:0;color:var(--ink-dim);font-size:14px}
+
+  .pricing{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:18px}
+  .tier{
+    background:var(--bg-elev);border:1px solid var(--line);border-radius:14px;
+    padding:24px;display:flex;flex-direction:column;gap:12px;
+  }
+  .tier.featured{border-color:var(--accent)}
+  .tier .pill{
+    align-self:flex-start;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;
+  }
+  .tier h3{margin:0}
+  .tier .amount{font-family:'Fraunces',serif;font-size:30px;font-weight:800;color:var(--ink);line-height:1}
+  .tier .amount small{font-family:'Inter',sans-serif;display:block;font-size:13px;color:var(--ink-muted);font-weight:500;margin-top:4px}
+  .tier ul{margin:6px 0 0;padding-left:1em;font-size:13.5px}
+  .tier ul li{padding:3px 0}
+  .tier .turn{font-size:12px;color:var(--ink-muted);margin-top:auto;padding-top:12px;border-top:1px dashed var(--line)}
+
+  .cta{
+    background:var(--bg-elev);border:1px solid var(--line);border-radius:14px;
+    padding:32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
+  }
+  .cta h2{margin:0}
+  .cta p{margin:6px 0 0;font-size:14px;color:var(--ink-dim)}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 22px;border-radius:999px;font-weight:600;font-size:14px;
+    background:var(--accent);color:#fff;border:1px solid transparent;
+    touch-action:manipulation;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{background:#a8301f;color:#fff;transform:translateY(-1px)}
+  .btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+  footer{padding:48px 0;font-size:13px;color:var(--ink-muted);text-align:center}
+  footer a{text-decoration:underline}
+
+  .proof{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .proof .card a{color:var(--ink);font-weight:600}
+
+  @media (max-width:680px){
+    header.hero{padding:64px 0 40px}
+    section{padding:48px 0}
+    .timeline{grid-template-columns:1fr}
+    .timeline .day{padding-top:0}
+    .cta{grid-template-columns:1fr}
+    .proof{grid-template-columns:1fr}
+    table.scope th{width:auto;display:block;background:transparent;padding-bottom:0}
+    table.scope td{display:block;padding-top:6px;padding-bottom:18px}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition-duration:.001ms!important;animation-duration:.001ms!important}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">For website owners, editors, and small teams</div>
+    <h1>A plain-English audit of your website.<br>Five deliverables. Five business days.</h1>
+    <p class="sub">A single human-written audit covering security, privacy, performance, accessibility, and design. No noisy scanners. No fearmongering. Just a clear list of what is wrong, what it would cost to fix, and what to do next.</p>
+    <div class="price-row">
+      <div class="price">$500 flat<small>or ₦750,000 NGN. No retainer.</small></div>
+      <div class="turnaround">Turnaround, <b>5 business days</b>.<br>Payment, 50 percent kickoff and 50 percent on delivery.</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What you receive</h2>
+    <div class="deliverables">
+      <div class="card"><span class="n">01</span><h3>Written audit</h3><p>Eight to fifteen pages, severity-sorted, every finding includes a one-line fix.</p></div>
+      <div class="card"><span class="n">02</span><h3>Site-wide review</h3><p>Extends beyond the homepage to login, REST API, sitemap, feed, and common attack-surface paths.</p></div>
+      <div class="card"><span class="n">03</span><h3>Live demo</h3><p>One representative page rebuilt to show how the recommendations land, with your brand and advertisers preserved.</p></div>
+      <div class="card"><span class="n">04</span><h3>Slide deck</h3><p>A short presentation of the audit and the proposal, ready to share with your team or the people who pay for the work.</p></div>
+      <div class="card"><span class="n">05</span><h3>Walk-through call</h3><p>45 minutes. I take you through every finding, answer questions, and help you prioritise.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What I check</h2>
+    <table class="scope">
+      <tr><th>Security</th><td>CMS version disclosure, REST API enumeration, XML-RPC, login brute-force protection, admin path exposure, third-party script supply chain, OAuth tokens, full security-header pass.</td></tr>
+      <tr><th>Privacy</th><td>Trackers loaded before consent, cookies set on first visit, leaked emails in public content, RSS or sitemap information disclosure.</td></tr>
+      <tr><th>Performance</th><td>Page weight, third-party origin count, render-blocking assets, image lazy-loading, font loading strategy, estimated Lighthouse score.</td></tr>
+      <tr><th>Accessibility</th><td>WCAG 2.1 AA contrast, viewport zoom, heading order, image alt coverage, focus visibility, skip link, keyboard navigation.</td></tr>
+      <tr><th>Design</th><td>Typography hierarchy, layout consistency, mobile breakpoints, ad placement quality, social preview cards, broken shortcodes.</td></tr>
+      <tr><th>Code quality</th><td>Dead CSS, unused plugins, invalid HTML, version fingerprinting, abandoned dependencies, inline event handlers.</td></tr>
+      <tr><th>SEO and structure</th><td>robots.txt, sitemap, canonical tags, redirect map readiness for any future migration.</td></tr>
+    </table>
+    <p style="font-size:13px;font-style:italic;margin-top:8px">No noisy scanners. Every probe is a single HEAD or GET request made with a standard browser User-Agent, the way a real visitor's browser behaves.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How it works</h2>
+    <div class="timeline">
+      <div class="day">Day 0</div>
+      <div class="step"><b>Kickoff call (30 minutes)</b><p>You share the URL and any context I should know. Advertisers, recent incidents, things you do not want changed.</p></div>
+      <div class="day">Days 1 to 3</div>
+      <div class="step"><b>The audit runs</b><p>No access to your hosting needed for the standard package. I probe public endpoints only.</p></div>
+      <div class="day">Day 4</div>
+      <div class="step"><b>Drafting</b><p>I write the report and build the slide deck. Live homepage demo if you booked that package.</p></div>
+      <div class="day">Day 5</div>
+      <div class="step"><b>Walk-through call (45 minutes)</b><p>I take you through every finding, prioritise, and hand over the full folder.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Proof, two recent audits</h2>
+    <div class="proof">
+      <div class="card">
+        <h3 style="margin-bottom:8px">JimiDisu.com</h3>
+        <p>Nigerian news commentary site. 15 security findings including open REST API user enumeration, no brute-force protection on the login page, and 10+ trackers running without consent. Full report, redesign demo, and slide deck.</p>
+        <p style="margin-top:10px"><a href="https://github.com/AdesojiDapo/jimidisu-redesign">github.com/AdesojiDapo/jimidisu-redesign</a></p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:8px">ipintegration.com</h3>
+        <p>UK enterprise tech site. Already well-hardened. Audit found two High-severity items (a WCAG-blocking viewport setting and a missing CSP) plus a tight list of minor improvements. Roughly 16 engineering hours of remediation work.</p>
+        <p style="margin-top:10px"><a href="https://github.com/AdesojiDapo/ipintegration-audit">github.com/AdesojiDapo/ipintegration-audit</a></p>
+      </div>
+    </div>
+    <p style="margin-top:18px;font-size:14px">Same checklist on both. Same severity grading. Same deliverables. The reports themselves are free to read before you decide.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What it costs</h2>
+    <div class="pricing">
+      <div class="tier">
+        <span class="pill">Audit</span>
+        <h3>Standard audit</h3>
+        <div class="amount">$500<small>or ₦750,000 NGN</small></div>
+        <ul>
+          <li>Written audit report</li>
+          <li>Site-wide review</li>
+          <li>Slide deck</li>
+          <li>45-minute walk-through call</li>
+        </ul>
+        <div class="turn">5 business days</div>
+      </div>
+      <div class="tier featured">
+        <span class="pill">Most popular</span>
+        <h3>Audit + homepage demo</h3>
+        <div class="amount">$1,200<small>or ₦1,800,000 NGN</small></div>
+        <ul>
+          <li>Everything in Standard, plus</li>
+          <li>One representative page rebuilt as a live preview</li>
+          <li>Brand and advertisers preserved</li>
+          <li>Privacy-first by default</li>
+        </ul>
+        <div class="turn">10 business days</div>
+      </div>
+      <div class="tier">
+        <span class="pill">Custom</span>
+        <h3>Full redesign + migration</h3>
+        <div class="amount">From $5,000<small>or ₦7,500,000 NGN</small></div>
+        <ul>
+          <li>Everything above, plus</li>
+          <li>Every template rebuilt</li>
+          <li>Content migration with redirect map</li>
+          <li>30 days of post-launch support</li>
+        </ul>
+        <div class="turn">4 to 6 weeks</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>Book a kickoff call</h2>
+        <p>One-line email with your site URL. I reply within one business day with a 30-minute slot.</p>
+      </div>
+      <a class="btn" href="mailto:admin@curiositybyade.com?subject=Site%20audit%20enquiry">Email Adesoji →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Adesoji Ajao, independent media and small business website audits. Nigeria, the UK, and the US. <br><a href="mailto:admin@curiositybyade.com">admin@curiositybyade.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
