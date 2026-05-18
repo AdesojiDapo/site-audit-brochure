@@ -2,7 +2,7 @@
 
 **For:** owners and editors of WordPress, Webflow, and custom-built business websites
 **By:** Curiosity  ·  All enquiries: admin@curiositybyade.com
-**Price:** **$500 flat** (₦750,000 NGN equivalent) · No retainer, no surprises
+**Price:** **£499 flat** · No retainer, no surprises · International invoicing on request
 **Turnaround:** **5 business days** from kickoff call to written report
 
 ---
@@ -108,11 +108,11 @@ All three audits used the same checklist. Same severity grading. Same deliverabl
 
 | Package | What you get | Price | Turnaround |
 |---|---|---|---|
-| **Audit** | All five deliverables above | **$500** (₦750,000) | 5 business days |
-| **Audit + Homepage Redesign Demo** | Audit + one representative page rebuilt as a live preview | **$1,200** (₦1,800,000) | 10 business days |
-| **Audit + Full Site Redesign + Migration** | Audit + every template rebuilt + content migration + redirects | **From $5,000** (₦7,500,000) | 4 to 6 weeks |
+| **Audit** | All five deliverables above | **£499** | 5 business days |
+| **Audit + Homepage Redesign Demo** | Audit + one representative page rebuilt as a live preview | **£1,199** | 10 business days |
+| **Audit + Full Site Redesign + Migration** | Audit + every template rebuilt + content migration + redirects | **From £4,995** | 4 to 6 weeks |
 
-Payment terms: 50 percent on kickoff, 50 percent on delivery. International invoice in USD, or local invoice in NGN. Bank transfer or Stripe.
+Payment terms: 50 percent on kickoff, 50 percent on delivery. UK invoice in GBP by default. USD or NGN invoice on request for international clients. Bank transfer or Stripe.
 
 ---
 

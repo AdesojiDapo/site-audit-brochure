@@ -16,9 +16,9 @@ A productised website audit, by Curiosity. Plain English, no scanners, five deli
 
 | Package | Price | Turnaround |
 |---|---|---|
-| Standard audit | **$500** (₦750,000) | 5 business days |
-| Audit + homepage redesign demo | **$1,200** (₦1,800,000) | 10 business days |
-| Full redesign + migration | **From $5,000** (₦7,500,000) | 4 to 6 weeks |
+| Standard audit | **£499** | 5 business days |
+| Audit + homepage redesign demo | **£1,199** | 10 business days |
+| Full redesign + migration | **From £4,995** | 4 to 6 weeks |
 
 ## Proof, two recent audits
 
