@@ -198,7 +198,7 @@
     <h2>What you receive</h2>
     <div class="deliverables">
       <div class="card"><span class="n">01</span><h3>Written audit</h3><p>Eight to fifteen pages, severity-sorted, every finding includes a one-line fix.</p></div>
-      <div class="card"><span class="n">02</span><h3>Site-wide review</h3><p>Extends beyond the homepage to login, REST API, sitemap, feed, and common attack-surface paths.</p></div>
+      <div class="card"><span class="n">02</span><h3>Site-wide review</h3><p>Extends beyond the homepage to the standard attack surface: login, REST API, sitemap, feed, common WordPress paths, and a sample of internal pages.</p></div>
       <div class="card"><span class="n">03</span><h3>Live demo</h3><p>One representative page rebuilt to show how the recommendations land, with your brand and advertisers preserved.</p></div>
       <div class="card"><span class="n">04</span><h3>Slide deck</h3><p>A short presentation of the audit and the proposal, ready to share with your team or the people who pay for the work.</p></div>
       <div class="card"><span class="n">05</span><h3>Walk-through call</h3><p>45 minutes. I take you through every finding, answer questions, and help you prioritise.</p></div>
@@ -240,8 +240,45 @@
 
 <section>
   <div class="wrap">
-    <h2>Proof, two recent audits</h2>
+    <h2>What is in scope, and what is not</h2>
     <div class="proof">
+      <div class="card">
+        <h3 style="margin-bottom:8px;color:#84B59F">In scope</h3>
+        <ul style="margin:8px 0 0;padding-left:1.1em;font-size:14px">
+          <li>Homepage HTML in detail</li>
+          <li>Security headers (CSP, HSTS, X-Frame, X-Content-Type, Referrer, Permissions)</li>
+          <li>REST API enumeration paths</li>
+          <li>Login and admin paths</li>
+          <li>XML-RPC, RSS feed, sitemap, robots.txt</li>
+          <li>Standard WordPress and Drupal attack-surface paths</li>
+          <li>A sample of internal pages from the sitemap</li>
+          <li>Third-party trackers and consent flow</li>
+          <li>Accessibility signals from the markup (WCAG 2.1 AA)</li>
+          <li>Performance signals (asset count, page weight, font strategy)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:8px;color:#c0392b">Not in scope</h3>
+        <ul style="margin:8px 0 0;padding-left:1.1em;font-size:14px">
+          <li>Penetration testing or active exploitation</li>
+          <li>Authenticated user-journey testing</li>
+          <li>Payment flow and checkout audits</li>
+          <li>Source-code review or hosting-config review</li>
+          <li>Database or backup security</li>
+          <li>Brute-force or rate-limit testing against live forms</li>
+          <li>Probing non-standard ports or subdomain portals</li>
+          <li>Mobile app review</li>
+        </ul>
+        <p style="margin-top:14px;font-size:12.5px;font-style:italic;color:var(--ink-muted)">Any of the above can be quoted as a separate engagement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Proof, three recent audits</h2>
+    <div class="proof" style="grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr))">
       <div class="card">
         <h3 style="margin-bottom:8px">JimiDisu.com</h3>
         <p>Nigerian news commentary site. 15 security findings including open REST API user enumeration, no brute-force protection on the login page, and 10+ trackers running without consent. Full report, redesign demo, and slide deck.</p>
@@ -249,11 +286,16 @@
       </div>
       <div class="card">
         <h3 style="margin-bottom:8px">ipintegration.com</h3>
-        <p>UK enterprise tech site. Already well-hardened. Audit found two High-severity items (a WCAG-blocking viewport setting and a missing CSP) plus a tight list of minor improvements. Roughly 16 engineering hours of remediation work.</p>
+        <p>UK enterprise tech site. Already well-hardened. Audit found two High items (WCAG-blocking viewport and a missing CSP) plus a tight list of minor improvements. About 16 engineering hours of remediation.</p>
         <p style="margin-top:10px"><a href="https://github.com/AdesojiDapo/ipintegration-audit">github.com/AdesojiDapo/ipintegration-audit</a></p>
       </div>
+      <div class="card">
+        <h3 style="margin-bottom:8px">vgpensions.com</h3>
+        <p>Nigerian pension fund administrator. Regulated financial services site. Strong baseline hardening, four High items, all best-practice gaps rather than active vulnerabilities. About 24 engineering hours plus a clear follow-up.</p>
+        <p style="margin-top:10px"><a href="https://github.com/AdesojiDapo/vgpensions-audit">github.com/AdesojiDapo/vgpensions-audit</a></p>
+      </div>
     </div>
-    <p style="margin-top:18px;font-size:14px">Same checklist on both. Same severity grading. Same deliverables. The reports themselves are free to read before you decide.</p>
+    <p style="margin-top:18px;font-size:14px">Same checklist across all three. Same severity grading. Same deliverables. The reports themselves are free to read before you decide.</p>
   </div>
 </section>
 
